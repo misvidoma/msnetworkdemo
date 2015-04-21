@@ -15,13 +15,14 @@ namespace DemoWeb
 
         public void Configure(IApplicationBuilder app)
         {
-			app.Run(async ctx =>
-			{
-				ctx.Response.ContentType = "text/plain";
-				await ctx.Response.WriteAsync(
-				   "Pozdrav MSNetwork. Sada smo: " +
-				   DateTime.Now);
-			});
+			//app.Run(async ctx =>
+			//{
+			//	ctx.Response.ContentType = "text/plain";
+			//	await ctx.Response.WriteAsync(
+			//	   "Pozdrav MSNetwork. Sada smo: " +
+			//	   DateTime.Now);
+			//});
+			app.UseWelcomePage();
 		}
     }
 }
